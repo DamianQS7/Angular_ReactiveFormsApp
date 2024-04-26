@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
+  {
+    path: 'selectors',
+    loadChildren: () => import('./selectors/selectors.module').then(m => m.SelectorsModule)
+  },
   { path: '**', redirectTo: 'reactive'}
 ];
 
