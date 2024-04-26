@@ -17,7 +17,7 @@ export class BasicPageComponent {
   
   public isInvalidField(field: string): boolean | null { 
     return this.myForm.controls[field].errors 
-    && !this.myForm.controls[field].pristine
+    && this.myForm.controls[field].touched
   }
 
   public getFieldError(field: string): string | null {
